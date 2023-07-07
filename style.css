@@ -1,0 +1,30 @@
+        /* Atur ukuran peta */
+        #map {
+            height: 570px;
+            width: 100%;
+        }
+
+        /* Atur posisi dan tampilan legenda */
+        .legend {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Atur tampilan legenda marker */
+        .legend i {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Atur tampilan legenda teks */
+        .legend span {
+            display: inline-block;
+            margin-right: 10px;
+        }

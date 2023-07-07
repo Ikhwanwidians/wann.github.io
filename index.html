@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOKASI RUMAH SAKIT DI SUKABUMI</title>
+    <!-- Tambahkan pustaka LeafletJS pada halaman web -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="legend">
+        <div>
+            <img src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/images/marker-icon.png" height="12" width="10"></i>
+            <span>Lokasi Rumah Sakit</span>
+        </div>
+        <div>
+            <img src="lokasi_saya.png" height="20" width="20"></i>
+            <span>Lokasi Pengguna</span>
+        </div>
+        <div>
+            <img src="icon_gunung.png" height="10" width="10"></i>
+            <span>Gunung</span>
+        </div>
+    </div>
+    <script>
+
+        const map = L.map('map').setView([-6.927806789212744, 106.92915513055293], 12);
+
+        // Tambahkan peta dasar OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        const rsMarker = L.marker([-6.922031147570829, 106.92386898887125]).addTo(map);
+        rsMarker.bindPopup('<b>RS Kartika</b><br/>Alamat : Jl. Jendral A. Yani  No. 18 Kota Sukabumi - Jawa Barat Telp : (0266) 6250902');
+        rsMarker.on('click', function() {
+            rsMarker.openPopup();
+        });
+
+        const rsudMarker = L.marker([-6.894816373667766, 106.79309274136422]).addTo(map);
+        rsudMarker.bindPopup('<b>RSUD Sekarwangi</b><br/>Alamat : Jl. Siliwangi, 49 Cibadak Kota Sukabumi - Jawa Barat Telp: (0266) 531117 Fax: (0266) 531646');
+        rsudMarker.on('click', function() {
+            rsudMarker.openPopup();
+        });
+
+        const rsudpMarker = L.marker([-6.988114343512468, 106.5573781569965]).addTo(map);
+        rsudpMarker.bindPopup('<b>RSUD Pelabuhan Ratu</b><br/>Alamat : Jl. Jend. A. Yani No. 2, Pelabuhan Ratu Kab. Sukabumi - Jawa Barat Telp: (0266) 432081 Fax: (0266) 432082');
+        rsudpMarker.on('click', function() {
+            rsudpMarker.openPopup();
+        });
+
+        const rshMarker = L.marker([-6.917492769856009, 106.96153968291797]).addTo(map);
+        rshMarker.bindPopup('<b>RS Hermina Sukabumi</b><br/>Alamat : Jl. Raya Sukaraja RT. 003/03, Sukaraja Kota Sukabumi - Jawa Barat Telp: 0266 6252525 Fax: 0266 235020');
+        rshMarker.on('click', function() {
+            rshMarker.openPopup();
+        });
+
+         const rsiMarker = L.marker([-6.915242310432214, 106.93262847675847]).addTo(map);
+        rsiMarker.bindPopup('<b>RSI Sukabumi</b><br/>Alamat : Jl. Cibolang, Cisaat Kota Sukabumi - Jawa Barat Telp: 0266 61115');
+        rsiMarker.on('click', function() {
+            rsiMarker.openPopup();
+        });
+
+        const rsiaMarker = L.marker([-6.918897770963419, 106.91722578142289]).addTo(map);
+        rsiaMarker.bindPopup('<b>RSI Assyifa</b><br/>Alamat : Jl. Jend. Sudirman No. 3 Kota Sukabumi - Jawa Barat Telp: 0266 222663 Fax: 0266 218672');
+        rsiaMarker.on('click', function() {
+            rsiaMarker.openPopup();
+        });
+
+        const rssMarker = L.marker([-6.910971565817358, 106.92572022802204]).addTo(map);
+        rssMarker.bindPopup('<b>RS Secapa Polri</b><br/>Alamat : Jl. Bhayangkara No.166 Kota Sukabumi - Jawa Barat Telp: (0266) 229207 Fax: (0266) 226262');
+        rssMarker.on('click', function() {
+            rssMarker.openPopup();
+        });
+
+        const rssyamMarker = L.marker([-6.914911418952252, 106.93547820789962]).addTo(map);
+        rssyamMarker.bindPopup('<b>RS Syamsudin SH</b><br/>Alamat : Jl. Rumah Sakit No. 1 Kota Sukabumi - Jawa Barat Telp: 0266 225180 Fax: 0266 212988');
+        rssyamMarker.on('click', function() {
+            rssyamMarker.openPopup();
+        });
+
+        const rsbhakMarker = L.marker([-6.77860686340872, 106.78465164158607]).addTo(map);
+        rsbhakMarker.bindPopup('<b>RS Bhakti Medicare</b><br/>Alamat : Jl. Raya Siliwangi No. 186 B Cicurug Kota Sukabumi - Jawa Barat Telp: 0266 731555 Fax: 0266 731899');
+        rsbhakMarker.on('click', function() {
+            rsbhakMarker.openPopup();
+        });
+
+        const rsriMarker = L.marker([-6.921748479502093, 106.93429392804534]).addTo(map);
+        rsriMarker.bindPopup('<b>RS Ridho Galih</b><br/>Alamat : Jl Gudang Kota Sukabumi - Jawabarat Telp : (0266) 221983');
+        rsriMarker.on('click', function() {
+            rsriMarker.openPopup();
+        });
+        
+        const rsbetMarker = L.marker([-6.902678465365177, 106.88279817670283]).addTo(map);
+        rsbetMarker.bindPopup('<b>RS Betha Medika</b><br/>Alamat : Jl. Raya Cikukulu, Cikukulu Kabupaten Sukabumi');
+        rsbetMarker.on('click', function() {
+            rsbetMarker.openPopup();
+        });
+
+        // Tambahkan layer jalan dari OpenStreetMap
+        const jalanLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Tambahkan layer air dari OpenStreetMap
+        const airLayer = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Tambahkan layer lokasi
+        const lokasiLayer = L.layerGroup().addTo(map);
+        const lokasiMarker = L.marker([-6.927806789212744, 106.92915513055293]);
+
+        // Tambahkan control layer untuk mengganti tampilan layer pada peta
+        const baseMaps = {
+            'OpenStreetMap': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 18
+            }),
+            'OpenStreetMap Black and White': L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 18
+            })
+        };
+        const overlayMaps = {
+            'Jalan': jalanLayer,
+            'Air': airLayer,
+            'Lokasi': lokasiLayer
+        };
+        L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+        const myIcon = L.icon({
+            iconUrl: 'lokasi_saya.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [0, -35],
+            });
+
+        const myLocation = L.marker([0, 0], {icon: myIcon}).addTo(map);
+
+        map.locate({setView: true, maxZoom: 15});
+
+        function onLocationFound(e) {
+            myLocation.setLatLng(e.latlng);
+            myLocation.bindPopup("<b>Lokasi Saya</b><br/>Latitude: " + e.latitude + "<br/>Longitude: " + e.longitude + "<br/>Akurasi: " + e.accuracy + " meter");
+            myLocation.openPopup();
+        }
+        function onLocationError(e) {
+            alert(e.message);
+        }
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+    </script>
+</body>
+</html>
